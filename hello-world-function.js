@@ -1,6 +1,5 @@
-var createHelloWorld = function() {
-    
-    return function(...args) {
-        return "Hello World";
-    }
-};
+const helloWorld = () => {
+    return "Hello, World!";
+  };
+  
+  module.exports = { helloWorld };

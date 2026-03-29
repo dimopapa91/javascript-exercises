@@ -1,0 +1,21 @@
+{
+  "name": "javascript-exercises",
+  "version": "1.0.0",
+  "description": "A new fresh start of Javascript chaos",
+  "main": "add-two-promises.js",
+  "scripts": {
+  "test": "jest"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimopapa91/javascript-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dimopapa91/javascript-exercises/issues"
+  },
+  "homepage": "https://github.com/dimopapa91/javascript-exercises#readme"
+}
