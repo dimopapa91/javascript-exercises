@@ -9,6 +9,7 @@ const reverseString = (str) => {
     return reversed;
 }
 
+console.log(reverseString("hello")); // "olleh"
 
 reverseString("hello") // "olleh"
 reverseString("abc")   // "cba"
@@ -27,9 +28,20 @@ Ignore zeros.
 */
 
 const countPositivesSumNegatives = (arr) => {
-    
+    let countPositives = 0;
+    let sumNegatives = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            countPositives++;
+        } else if (arr[i] < 0) {
+            sumNegatives += arr[i];
+        }
+    }
+    return [countPositives, sumNegatives];
 }
 
+console.log(countPositivesSumNegatives([1, 2, 3, -1, -2, 0])) // [3, -3]
 
 countPositivesSumNegatives([1, 2, 3, -1, -2, 0]) // [3, -3]
 countPositivesSumNegatives([0, 0, 0]) // [0, 0]
