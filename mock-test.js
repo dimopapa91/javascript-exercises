@@ -177,3 +177,23 @@ const repeatString = (str, n) => {
 
 console.log(repeatString("ha",3))// "hahaha"
 console.log(repeatString("abc",2))// "abcabc"
+
+
+// 12. Write a function findMin(arr) that returns the smallest number in the array
+
+const findMin = (arr) => {
+    let min = arr[0];
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+
+        if (num < min) {
+            min = num;
+        }
+    }
+    return min;
+}
+
+
+console.log(findMin([3,7,2,9,5]))// 2
+console.log(findMin([-10,-3,-20]))// -20)
