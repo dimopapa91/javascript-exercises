@@ -107,4 +107,20 @@ console.log(fizzBuzz(15)) // "FizzBuzz"
 console.log(fizzBuzz(7)) // 7
 
 
-// 8. 
+// 8. Write a function getOdds(arr), return only the odd numbers.
+
+const getOdds = (arr) => {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+        if (num % 2 !== 0) {
+            result.push(num);
+        } 
+    }
+    return result;
+}
+
+
+console.log(getOdds([1, 2, 3, 4, 5])) // [1, 3, 5]
+console.log(getOdds([2, 4, 6])) // []
