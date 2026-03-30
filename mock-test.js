@@ -69,4 +69,40 @@ isPalindrome("racecar") // true
 isPalindrome("madam") // true
 isPalindrome("hello") // false
 
-// 7. Write a function
+// 7. Write a function getEvens(arr) that returns a new array containing only the even numbers.
+
+const getEvens = (arr) => {
+    return arr.filter % 2 ? true : false;
+}
+
+console.log(getEvens([1, 2, 3, 4, 5, 6]))
+getEvens([1, 2, 3, 4, 5, 6]) // [2, 4, 6]
+getEvens([1, 3, 5]) // []
+
+
+/* 8. Write a function fizzBuzz(n) that:
+returns "FizzBuzz" if divisible by both 3 and 5
+returns "Fizz" if divisible by 3
+returns "Buzz" if divisible by 5
+otherwise returns the number  */
+
+const fizzBuzz = (n) => {
+    for (let i = 1; i <= n; i++) {
+
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz")
+        } else if (i % 3 === 0) {
+            console.log("Fizz")
+        } else if (i % 5 === 0) {
+            console.log("Buzz")
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+
+fizzBuzz(3) // "Fizz"
+fizzBuzz(5) // "Buzz"
+fizzBuzz(15) // "FizzBuzz"
+fizzBuzz(7) // 7
