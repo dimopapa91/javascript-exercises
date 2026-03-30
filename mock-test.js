@@ -217,3 +217,20 @@ const findMinDiff = arr => arr.reduce((min, num) => num < min ? num : min);
 
 console.log(findMinDiff([3,7,2,9,5]))// 2
 console.log(findMinDiff([-10,-3,-20]))// -20)
+
+
+
+// 13. Write a function capitalizeFirst(str) that capitalize only the first letter
+
+const capitalizeFirst = str => str ? str[0].toUpperCase() + str.slice(1) : "";
+
+console.log(capitalizeFirst("hello"))// "Hello"
+console.log(capitalizeFirst("javascript"))// "Javascript"
+
+
+// or
+
+const capitalizeFirstLetter = str => str.charAt(0).toUpperCase() + str.slice(1);
+
+console.log(capitalizeFirstLetter("hello"))// "Hello"
+console.log(capitalizeFirstLetter("javascript"))// "Javascript"
