@@ -164,3 +164,16 @@ console.log(countLetters("a b c")) // 3
 
 
 // 11. Write a function repeatString(str, n) that returns the string repeated n times.
+
+const repeatString = (str, n) => {
+    let result = '';
+
+    for (let i = 0; i < n; i++) {
+        result += str;
+    }
+    return result;
+}
+
+
+console.log(repeatString("ha",3))// "hahaha"
+console.log(repeatString("abc",2))// "abcabc"
