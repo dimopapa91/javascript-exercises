@@ -88,6 +88,7 @@ returns "Buzz" if divisible by 5
 otherwise returns the number  */
 
 const fizzBuzz = (n) => {
+    const result = [];
     for (let i = 1; i <= n; i++) {
 
         if (i % 3 === 0 && i % 5 === 0) {
@@ -108,3 +109,5 @@ fizzBuzz(5) // "Buzz"
 fizzBuzz(15) // "FizzBuzz"
 fizzBuzz(7) // 7
 
+
+// 8. 
