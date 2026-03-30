@@ -182,9 +182,12 @@ console.log(repeatString("abc",2))// "abcabc"
 // 12. Write a function findMin(arr) that returns the smallest number in the array
 
 const findMin = (arr) => {
+
+    if (arr.length === 0) return undefined;
+
     let min = arr[0];
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         let num = arr[i];
 
         if (num < min) {
@@ -197,3 +200,20 @@ const findMin = (arr) => {
 
 console.log(findMin([3,7,2,9,5]))// 2
 console.log(findMin([-10,-3,-20]))// -20)
+
+
+//or 
+
+const findMinNew = arr => Math.min(...arr);
+
+
+console.log(findMinNew([3,7,2,9,5]))// 2
+console.log(findMinNew([-10,-3,-20]))// -20)
+
+//or
+
+const findMinDiff = arr => arr.reduce((min, num) => num < min ? num : min);
+
+
+console.log(findMinDiff([3,7,2,9,5]))// 2
+console.log(findMinDiff([-10,-3,-20]))// -20)
