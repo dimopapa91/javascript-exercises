@@ -138,4 +138,29 @@ console.log(getOddsNew([2, 4, 6])) // []
 
 
 
-//10. 
+//10. Write a function countLetters(str) that count how many letters are in the string, ignoring spaces.
+
+const countLetters = (str) => {
+    let result = {};
+
+    str = str.toLowerCase();
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i]
+
+        if (char === ' ') continue
+
+        if (result[char]) {
+            result[char]++;
+        } else {
+            result[char] = 1;
+        }
+    }
+    return result;
+}
+
+console.log(countLetters("hello world")) // 10
+console.log(countLetters("a b c")) // 3
+
+
+// 11. Write a function repeatString(str, n) that returns the string repeated n times.
