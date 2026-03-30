@@ -69,6 +69,7 @@ isPalindrome("racecar") // true
 isPalindrome("madam") // true
 isPalindrome("hello") // false
 
+
 // 7. Write a function getEvens(arr) that returns a new array containing only the even numbers.
 
 const getEvens = (arr) => {
@@ -106,3 +107,4 @@ fizzBuzz(3) // "Fizz"
 fizzBuzz(5) // "Buzz"
 fizzBuzz(15) // "FizzBuzz"
 fizzBuzz(7) // 7
+
