@@ -73,7 +73,7 @@ isPalindrome("hello") // false
 // 7. Write a function getEvens(arr) that returns a new array containing only the even numbers.
 
 const getEvens = (arr) => {
-    return arr.filter % 2 ? true : false;
+    return arr.filter(num => num % 2) ? true : false;
 }
 
 console.log(getEvens([1, 2, 3, 4, 5, 6]))
@@ -88,26 +88,23 @@ returns "Buzz" if divisible by 5
 otherwise returns the number  */
 
 const fizzBuzz = (n) => {
-    const result = [];
-    for (let i = 1; i <= n; i++) {
-
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz")
-        } else if (i % 3 === 0) {
-            console.log("Fizz")
-        } else if (i % 5 === 0) {
-            console.log("Buzz")
-        } else {
-            console.log(i);
-        }
+    if (n % 3 === 0 && n % 5 === 0) {
+      return "FizzBuzz";
+    } else if (n % 3 === 0) {
+      return "Fizz";
+    } else if (n % 5 === 0) {
+      return "Buzz";
+    } else {
+      return n;
     }
-}
+  }
 
 
-fizzBuzz(3) // "Fizz"
-fizzBuzz(5) // "Buzz"
-fizzBuzz(15) // "FizzBuzz"
-fizzBuzz(7) // 7
+
+console.log(fizzBuzz(3)) // "Fizz"
+console.log(fizzBuzz(5)) // "Buzz"
+console.log(fizzBuzz(15)) // "FizzBuzz"
+console.log(fizzBuzz(7)) // 7
 
 
 // 8. 
