@@ -296,3 +296,42 @@ const isAnagram = (str1, str2) => {
 console.log(isAnagram("listen","silent"))// true
 console.log(isAnagram("hello","world"))// false
 
+
+
+// 17. Write a function secondLargest(arr) that returns the second largest number.
+
+const secondLargest = (arr) => {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i ++) {
+        result.push(arr[i]);
+
+        if (arr[i] !== arr.length -1) {
+            return arr[i];
+        }
+    }
+}
+
+console.log(secondLargest([10,5,8,20]))// 10
+console.log(secondLargest([1,2,3,4]))// 3
+
+//or more advanced
+
+const scndLargest = (arr) => {
+    let max = -Infinity;
+    let secondMax = -Infinity;
+
+    for (let num of arr) {
+        if (num > max) {
+            secondMax = max;
+            max = num;
+        } else if (num > secondMax && num !== max) {
+            secondMax = num;
+        }
+    }
+
+    return secondMax;
+}
+
+console.log(scndLargest([10,5,8,20]))// 10
+console.log(scndLargest([1,2,3,4]))// 3
