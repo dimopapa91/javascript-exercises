@@ -234,3 +234,21 @@ const capitalizeFirstLetter = str => str.charAt(0).toUpperCase() + str.slice(1);
 
 console.log(capitalizeFirstLetter("hello"))// "Hello"
 console.log(capitalizeFirstLetter("javascript"))// "Javascript"
+
+
+
+// 14. Write a function removeDuplicates(arr) that returns a new array with duplicates removed.
+
+const removeDuplicates = (arr) => {
+    let result = [];
+
+    for (let i= 0; i < arr.length; i++) {
+        if (!result.includes(arr[i])) {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+
+console.log(removeDuplicates([1,2,2,3,3,4]))// [1, 2, 3, 4]
+console.log(removeDuplicates(["a","a","b"]))// ["a", "b"]
