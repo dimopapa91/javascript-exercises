@@ -281,3 +281,18 @@ console.log(sumEvenNumber([1,2,3,4,5,6]))// 12
 console.log(sumEvenNumber([1,3,5]))// 0
 
 
+// 16. Write a function isAnagram(str1, str2) that returns true if both words use the same letters.
+
+const isAnagram = (str1, str2) => {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    const sorted1 = str1.split('').sort().join('');
+    const sorted2 = str2.split('').sort().join('');
+
+    return sorted1 === sorted2;
+}
+
+console.log(isAnagram("listen","silent"))// true
+console.log(isAnagram("hello","world"))// false
+
