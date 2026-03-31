@@ -252,3 +252,32 @@ const removeDuplicates = (arr) => {
 
 console.log(removeDuplicates([1,2,2,3,3,4]))// [1, 2, 3, 4]
 console.log(removeDuplicates(["a","a","b"]))// ["a", "b"]
+
+
+
+// 15. Write a function sumEvenNumbers(arr) that returns the sum of only the even numbers.
+
+const sumEvenNumbers = (arr) => {
+    let result = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            result += arr[i];
+        }
+    }
+    return result;
+}
+
+console.log(sumEvenNumbers([1,2,3,4,5,6]))// 12
+console.log(sumEvenNumbers([1,3,5]))// 0
+
+
+// or
+const sumEvenNumber = (arr) =>
+    arr.filter(num => num % 2 === 0)
+       .reduce((sum, num) => sum + num, 0);
+
+console.log(sumEvenNumber([1,2,3,4,5,6]))// 12
+console.log(sumEvenNumber([1,3,5]))// 0
+
+
